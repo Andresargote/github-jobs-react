@@ -24,7 +24,6 @@ const reducer = (state, action) => {
 }
 
 export default function useFetchJobs(params) {
-    console.log(params);
     const [state, dispatch] = useReducer(reducer, { jobs: [], loading: true });
 
     useEffect(() => {
