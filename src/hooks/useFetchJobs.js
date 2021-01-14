@@ -8,7 +8,7 @@ const Actions = {
     ERROR: "error",
 }
 
-const AllJobsUrl = "http://localhost:8010/proxy/positions.json";
+const AllJobsUrl = "http://localhost:8010/proxy";
 
 const reducer = (state, action) => {
     switch (action.type) {
@@ -39,22 +39,3 @@ export default function useFetchJobs(params) {
 
     return state;
 }
-
-/*export const useFetchJobs = () => {
-
-    const AllJobsUrl = "http://localhost:8010/proxy/positions.json";
-
-    const [jobs, setJobs] = useState({
-        jobs: [],
-        loading: true,
-        error: null,
-    });
-
-    useEffect(() => {
-        axios.get(AllJobsUrl)
-            .then(response => setJobs({jobs:response.data, loading: false, error: null}))
-            .catch(error => setJobs({jobs: [], loading: false, error: error}))
-    }, [])
-
-    return {jobs, setJobs}
-}*/

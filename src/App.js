@@ -3,11 +3,14 @@ import './App.css';
 
 //Importar componentes
 import {JobsScreen} from "./pages/JobsScreen";
+import { GithubRouter } from "./routers/GithubRouter";
 
 function App() {
   return (
     <div className="App">
-      <JobsScreen />
+      <GithubRouter>
+          <JobsScreen />
+      </GithubRouter>
     </div>
   );
 }

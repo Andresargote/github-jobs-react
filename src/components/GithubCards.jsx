@@ -1,5 +1,6 @@
 //hacer cards
 import React from 'react';
+import {Link} from 'react-router-dom';
 
 import './styles/GithubCards.css';
 
@@ -12,7 +13,7 @@ export const GithubCards = (props) => {
             </div>
             <div className="card-info">
                 <h3>{props.company}</h3>
-                <span className="title">{props.title}</span>
+                <span className="title"><Link to={`/job/${props.id}`}>{props.title}</Link></span>
                 <div className="card-details">
                     <span className="full-time">{props.type}</span>
                     <div className="container">
